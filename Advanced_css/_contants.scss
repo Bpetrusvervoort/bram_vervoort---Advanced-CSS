@@ -1,0 +1,30 @@
+$background: #c3cfe2;
+$font: Arial;
+
+@mixin social-media-knop {
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  transform: scale(1);
+  width: 600px;
+  padding: 5px;
+}
+
+@mixin hover-deel-3 {
+  transform: translate(-180px);
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+@mixin img-deel-3 {
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  padding: 5px;
+}
+
+@mixin a-deel-3 {
+  margin-top: 15px;
+  position: absolute;
+  color: white;
+  font: 12px Arial, Helvetica, sans-serif;
+}

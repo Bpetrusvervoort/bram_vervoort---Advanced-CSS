@@ -1,0 +1,380 @@
+body {
+  background: #c3cfe2;
+  font-family: Arial;
+  padding: 0;
+  margin: 0;
+}
+
+/* Deel 1 - TESTIMONIAL MAKEN */
+.deel-1 {
+  height: 600px;
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 200px 200px 100px;
+      grid-template-columns: 100px 200px 200px 100px;
+  -ms-grid-rows: 20px 270px 50px 180px 20px;
+      grid-template-rows: 20px 270px 50px 180px 20px;
+      grid-template-areas: ". . . ." ". header header ." ". main main ." ". footer footer ." ". . . .";
+}
+
+header {
+  background: white;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+  border-radius: 20px 20px 0 0;
+}
+
+header p {
+  padding: 10px;
+  margin: 50px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 3px;
+  color: #4c4b4b;
+}
+
+main {
+  background: white;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: main;
+}
+
+main img {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 6px solid white;
+  width: 100px;
+}
+
+footer {
+  background: #686de0;
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
+  text-align: center;
+  border-radius: 0px 0px 20px 20px;
+  padding-top: 70px;
+  -webkit-box-shadow: 0px 10px 8px #929191;
+          box-shadow: 0px 10px 8px #929191;
+}
+
+footer h2 {
+  color: white;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+footer h3 {
+  color: #b4b5e7;
+}
+
+/* Deel 2 - PORTFOLIO GRID */
+.deel-2 {
+  width: 100%;
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (7)[1fr];
+      grid-template-rows: repeat(1fr, 7);
+  grid-gap: 10px;
+  margin: 10px;
+}
+
+.portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  height: auto;
+}
+
+.image {
+  position: absolute;
+  border-radius: 20px;
+  width: auto;
+  height: auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+.image img {
+  position: relative;
+  border-radius: 20px;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+}
+
+.button {
+  position: relative;
+  background: #2c323d;
+  border-radius: 20px;
+  width: 300px;
+  height: 305px;
+  margin: 30px;
+  opacity: 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.button button {
+  text-align: center;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media (min-width: 1025px) {
+  .deel-2 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: (4)[1fr];
+        grid-template-rows: repeat(1fr, 4);
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "photo-fade-1 photo-fade-2" "photo-fade-3 photo-fade-4" "photo-fade-5 photo-fade-6" "photo-fade-7 .";
+  }
+}
+
+@media (min-width: 1281px) {
+  .deel-2 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: (3)[1fr];
+        grid-template-rows: repeat(1fr, 3);
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "photo-fade-1 photo-fade-2 photo-fade-3" "photo-fade-4 photo-fade-5 photo-fade-6" "photo-fade-7 . .";
+  }
+}
+
+/* Deel 3: Social media buttons */
+deel-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  justify-items: flex-end;
+}
+
+.social-media {
+  position: fixed;
+  bottom: 56px;
+  right: -565px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  color: white;
+}
+
+.blog {
+  background-color: #e17b77;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  width: 600px;
+  padding: 5px;
+}
+
+.blog:hover {
+  -webkit-transform: translate(-180px);
+          transform: translate(-180px);
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.blog img {
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  padding: 5px;
+}
+
+.blog a {
+  margin-top: 15px;
+  position: absolute;
+  color: white;
+  font: 12px Arial, Helvetica, sans-serif;
+}
+
+.twitter {
+  background-color: #00aced;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  width: 600px;
+  padding: 5px;
+}
+
+.twitter:hover {
+  -webkit-transform: translate(-180px);
+          transform: translate(-180px);
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.twitter img {
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  padding: 5px;
+}
+
+.twitter a {
+  margin-top: 15px;
+  position: absolute;
+  color: white;
+  font: 12px Arial, Helvetica, sans-serif;
+}
+
+.linkedin {
+  background-color: #007bb6;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  width: 600px;
+  padding: 5px;
+}
+
+.linkedin:hover {
+  -webkit-transform: translate(-180px);
+          transform: translate(-180px);
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.linkedin img {
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  padding: 5px;
+}
+
+.linkedin a {
+  margin-top: 15px;
+  position: absolute;
+  color: white;
+  font: 12px Arial, Helvetica, sans-serif;
+}
+
+.facebook {
+  background-color: #3b5998;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  width: 600px;
+  padding: 5px;
+}
+
+.facebook:hover {
+  -webkit-transform: translate(-180px);
+          transform: translate(-180px);
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.facebook img {
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  padding: 5px;
+}
+
+.facebook a {
+  margin-top: 15px;
+  position: absolute;
+  color: white;
+  font: 12px Arial, Helvetica, sans-serif;
+}
+
+.github {
+  background-color: black;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  width: 600px;
+  padding: 5px;
+}
+
+.github:hover {
+  -webkit-transform: translate(-180px);
+          transform: translate(-180px);
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.github img {
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  padding: 5px;
+}
+
+.github a {
+  margin-top: 15px;
+  position: absolute;
+  color: white;
+  font: 12px Arial, Helvetica, sans-serif;
+}
+/*# sourceMappingURL=style.css.map */

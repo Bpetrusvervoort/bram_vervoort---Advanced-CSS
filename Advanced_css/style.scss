@@ -1,0 +1,241 @@
+@import "./constants";
+
+body {
+  background: $background;
+  font-family: $font;
+  padding: 0;
+  margin: 0;
+}
+
+/* Deel 1 - TESTIMONIAL MAKEN */
+
+.deel-1 {
+  height: 600px;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 100px 200px 200px 100px;
+  grid-template-rows: 20px 270px 50px 180px 20px;
+  grid-template-areas:
+    ". . . ."
+    ". header header ."
+    ". main main ."
+    ". footer footer ."
+    ". . . .";
+}
+
+header {
+  background: rgb(255, 255, 255);
+  grid-area: header;
+  border-radius: 20px 20px 0 0;
+  p {
+    padding: 10px;
+    margin: 50px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: rgb(76, 75, 75);
+  }
+}
+
+main {
+  background: rgb(255, 255, 255);
+  grid-area: main;
+  img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 6px solid white;
+    width: 100px;
+  }
+}
+
+footer {
+  background: #686de0;
+  grid-area: footer;
+  text-align: center;
+  border-radius: 0px 0px 20px 20px;
+  padding-top: 70px;
+  box-shadow: 0px 10px 8px #929191;
+  h2 {
+    color: white;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+  h3 {
+    color: #b4b5e7;
+  }
+}
+
+/* Deel 2 - PORTFOLIO GRID */
+
+.deel-2 {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(1fr, 7);
+  grid-gap: 10px;
+  margin: 10px;
+}
+
+.portfolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+
+.image {
+  position: absolute;
+  border-radius: 20px;
+  width: auto;
+  height: auto;
+  transition: 0.5s;
+  border-radius: 20px;
+  img {
+    position: relative;
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+  }
+}
+
+.button {
+  position: relative;
+  background: rgb(44, 50, 61);
+  border-radius: 20px;
+  width: 300px;
+  height: 305px;
+  margin: 30px;
+  opacity: 0%;
+  display: flex;
+  button {
+    text-align: center;
+    margin: auto;
+    display: flex;
+    cursor: pointer;
+  }
+  &:hover {
+    opacity: 100%;
+    transition: 0.5s;
+  }
+}
+
+@media (min-width: 1025px) {
+  .deel-2 {
+    display: grid;
+    grid-template-rows: repeat(1fr, 4);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "photo-fade-1 photo-fade-2"
+      "photo-fade-3 photo-fade-4"
+      "photo-fade-5 photo-fade-6"
+      "photo-fade-7 .";
+  }
+}
+
+@media (min-width: 1281px) {
+  .deel-2 {
+    display: grid;
+    grid-template-rows: repeat(1fr, 3);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "photo-fade-1 photo-fade-2 photo-fade-3"
+      "photo-fade-4 photo-fade-5 photo-fade-6"
+      "photo-fade-7 . .";
+  }
+}
+
+/* Deel 3: Social media buttons */
+
+deel-3 {
+  display: flex;
+  justify-content: flex-end;
+  justify-items: flex-end;
+}
+
+.social-media {
+  position: fixed;
+  bottom: 56px;
+  right: -565px;
+  display: flex;
+  flex-flow: column;
+  color: white;
+}
+
+.blog {
+  background-color: #e17b77;
+  @include social-media-knop();
+  &:hover {
+    @include hover-deel-3();
+  }
+  img {
+    @include img-deel-3();
+  }
+  a {
+    @include a-deel-3();
+  }
+}
+
+.twitter {
+  background-color: #00aced;
+  @include social-media-knop();
+  &:hover {
+    @include hover-deel-3();
+  }
+  img {
+    @include img-deel-3();
+  }
+  a {
+    @include a-deel-3();
+  }
+}
+
+.linkedin {
+  background-color: #007bb6;
+  @include social-media-knop();
+  &:hover {
+    @include hover-deel-3();
+  }
+  img {
+    @include img-deel-3();
+  }
+  a {
+    @include a-deel-3();
+  }
+}
+
+.facebook {
+  background-color: #3b5998;
+  @include social-media-knop();
+  &:hover {
+    @include hover-deel-3();
+  }
+  img {
+    @include img-deel-3();
+  }
+  a {
+    @include a-deel-3();
+  }
+}
+
+.github {
+  background-color: black;
+  @include social-media-knop();
+  &:hover {
+    @include hover-deel-3();
+  }
+  img {
+    @include img-deel-3();
+  }
+  a {
+    @include a-deel-3();
+  }
+}
